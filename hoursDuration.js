@@ -1,6 +1,5 @@
 var hoursDuration = function(hour){
   this.hour = hour;
-  return hour;
 }
 
 hoursDuration.prototype.isNegative = function(hour){
@@ -24,9 +23,7 @@ hoursDuration.prototype.ofMinutes = function(minutes){
       hours = parseInt(hours) - 1;
   }
   return (this.isNegative(minutes) ? '-' : '')
-          + ((hours < 10 ? '0' : '') + hours
-          + ':'
-          + (min < 10 ? '0' : '') + min);
+          + ((hours < 10 ? '0' : '') + hours + ':' + (min < 10 ? '0' : '') + min);
 }
 
 hoursDuration.prototype.add = function(hour){
